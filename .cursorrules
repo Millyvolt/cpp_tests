@@ -1,0 +1,7 @@
+# C++ Standards and Rules
+
+- Always use C++17 standard when writing C++ code
+- Use `-std=c++17` compiler flag in build configurations
+- Prefer C++17 features and syntax (e.g., structured bindings, if constexpr, std::optional, etc.)
+- Ensure all C++ code is compatible with C++17 standard
+
