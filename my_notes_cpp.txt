@@ -11,10 +11,21 @@ Move
 
 
 
-    Вопросы:
+    Вопросы:  (распределить по сложности)
     - назвать применения volatile
     - назвать применения static
     - protected
     - умные указатели инициализация с make_ и без 
     - виртуальное наследование
     - pure virtual
+    - ddd problem
+    - абстрактный класс
+    - virtual base class
+    - RAII
+    - EBCO - empty base class optimization idiom
+    - SFINAE
+    - итераторы
+    - erase remove idiom
+    - vtable
+    - правило трех
+    - правило пяти
