@@ -1,6 +1,6 @@
 # Advanced C++ Programming Exercises
 
-This repository contains 7 advanced-level C++ programming exercises designed to help you master modern C++ features and best practices.
+This repository contains 8 advanced-level C++ programming exercises designed to help you master modern C++ features and best practices.
 
 ## Exercises
 
@@ -91,6 +91,24 @@ Analyze provided C++ code with virtual inheritance and predict the program outpu
 - Destructor order and cleanup sequence
 
 **Type:** Code Reading / Output Prediction
+
+### Exercise 8: Move Semantics Code Analysis
+**Topic:** Move Semantics Code Reading  
+**Files:** `exercise_8_problem.md`, `exercise_8_solution.cpp`, `exercise_8_answers.md`
+
+Analyze provided C++ code demonstrating move semantics and predict when copy vs move operations occur. Test your understanding of rvalue references, `std::move()`, function parameter passing, return value optimization, and container operations with move semantics.
+
+**Key Concepts:**
+- Copy vs move constructors and assignments
+- Rvalue reference binding rules
+- `std::move()` and when moves actually occur
+- Function parameter passing (by value, reference, rvalue reference)
+- Return Value Optimization (RVO)
+- Container operations with move semantics
+- Const objects and move semantics
+
+**Type:** Code Reading / Output Prediction  
+**Difficulty:** Medium
 
 ## How to Use
 

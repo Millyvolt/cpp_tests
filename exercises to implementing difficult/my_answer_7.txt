@@ -1,0 +1,24 @@
+=== Creating Final object ===
+Base(Test) constructed. Total instances: 1
+Derived1(Test, 10) constructed
+Derived2(Test, 20) constructed
+Final(Test, 10, 20, 30) constructed
+
+=== Instance count ===
+Base instances: 1
+
+=== Object sizes ===
+
+=== Virtual function calls ===
+Calling through Base*:
+Base::show() - name: Test
+Calling through Derived1*:
+Derived1::show() - value1: 10
+Calling through Derived2*:
+Derived1::show() - value1: 20
+
+=== Destruction begins ===
+Final destructed
+Derived2 destructed
+Derived1 destructed
+Base(Test) destructed. Remaining instances: 0

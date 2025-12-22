@@ -16,16 +16,18 @@ Move
     - назвать применения static
     - protected
     - умные указатели инициализация с make_ и без 
-    - виртуальное наследование
-    - pure virtual
     - ddd problem
-    - абстрактный класс
+    - виртуальное наследование
     - virtual base class
-    - RAII
-    - EBCO - empty base class optimization idiom
-    - SFINAE
-    - итераторы
-    - erase remove idiom
+    - pure virtual
     - vtable
+    - абстрактный класс
+    - SFINAE
+    - EBCO - empty base class optimization idiom
+    - RVO idiom
+    - RAII
+    - erase remove idiom
     - правило трех
     - правило пяти
+    - итераторы
+    - noexcept
