@@ -15,6 +15,7 @@ Move
     - назвать применения volatile
     - назвать применения static
     - protected
+    - constexpr
     - умные указатели инициализация с make_ и без 
     - ddd problem
     - виртуальное наследование
@@ -24,7 +25,8 @@ Move
     - абстрактный класс
     - SFINAE
     - EBCO - empty base class optimization idiom
-    - RVO idiom
+    - RVO NRVO idiom
+    - copy elision
     - RAII
     - erase remove idiom
     - правило трех

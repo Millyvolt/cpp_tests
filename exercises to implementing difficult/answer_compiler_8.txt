@@ -1,0 +1,124 @@
+=== Test 1: Direct construction ===
+TrackedResource(1) constructed with value 10
+
+=== Test 2: Copy construction ===
+TrackedResource(2) copy constructed from 1
+
+=== Test 3: Move construction ===
+TrackedResource(1) move constructed from -1
+  Note: obj1 is now in moved-from state (id = -1)
+
+=== Test 4: Function by value (lvalue) ===
+TrackedResource(1) constructed with value 20
+TrackedResource(2) copy constructed from 1
+funcByValue called
+TrackedResource(2) destructed
+  Copy constructions: 1
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 0
+
+=== Test 5: Function by value (rvalue) ===
+TrackedResource(1) constructed with value 30
+funcByValue called
+TrackedResource(1) destructed
+  Copy constructions: 0
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 0
+
+=== Test 6: Function by reference ===
+TrackedResource(1) constructed with value 40
+funcByRef called
+  Copy constructions: 0
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 0
+
+=== Test 7: Function by rvalue reference ===
+TrackedResource(1) constructed with value 50
+funcByRvalueRef called
+TrackedResource(1) destructed
+  Copy constructions: 0
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 0
+
+=== Test 8: Return by value ===
+TrackedResource(1) constructed with value 100
+  Copy constructions: 0
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 0
+  Note: RVO may eliminate the copy/move, compiler dependent
+
+=== Test 9: Assignment (lvalue) ===
+TrackedResource(1) constructed with value 60
+TrackedResource(2) constructed with value 70
+TrackedResource(3) copy assigned from 1
+  Copy constructions: 0
+  Move constructions: 0
+  Copy assignments: 1
+  Move assignments: 0
+
+=== Test 10: Assignment (rvalue) ===
+TrackedResource(1) constructed with value 80
+TrackedResource(2) constructed with value 90
+TrackedResource(2) move assigned from -1
+  Copy constructions: 0
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 1
+
+=== Test 11: std::vector push_back (lvalue) ===
+TrackedResource(1) constructed with value 100
+TrackedResource(2) copy constructed from 1
+  Copy constructions: 1
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 0
+
+=== Test 12: std::vector push_back (rvalue) ===
+TrackedResource(1) constructed with value 200
+TrackedResource(1) move constructed from -1
+  Copy constructions: 0
+  Move constructions: 1
+  Copy assignments: 0
+  Move assignments: 0
+
+=== Test 13: std::vector push_back with std::move ===
+TrackedResource(1) constructed with value 300
+TrackedResource(1) move constructed from -1
+  Copy constructions: 0
+  Move constructions: 1
+  Copy assignments: 0
+  Move assignments: 0
+
+=== Test 14: Container resize ===
+TrackedResource(1) constructed with value 400
+TrackedResource(2) copy constructed from 1
+TrackedResource(3) copy constructed from 1
+TrackedResource(4) copy constructed from 1
+TrackedResource(1) destructed
+  Copy constructions: 3
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 0
+
+=== Test 15: Multiple moves ===
+TrackedResource(1) constructed with value 500
+TrackedResource(1) move constructed from -1
+TrackedResource(1) move constructed from -1
+  Copy constructions: 0
+  Move constructions: 2
+  Copy assignments: 0
+  Move assignments: 0
+  Note: Moving from moved-from object is safe, but object is in valid but unspecified state
+
+=== Test 16: Const object ===
+TrackedResource(1) constructed with value 600
+TrackedResource(2) copy constructed from 1
+  Copy constructions: 1
+  Move constructions: 0
+  Copy assignments: 0
+  Move assignments: 0

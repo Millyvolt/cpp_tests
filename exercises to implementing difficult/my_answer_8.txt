@@ -1,0 +1,63 @@
+=== Test 1: Direct construction ===
+TrackedResource(1) constructed with value
+
+=== Test 2: Copy construction ===
+TrackedResource(2) copy constructed from 1
+
+=== Test 3: Move construction ===
+TrackedResource(1) move constructed from -1
+
+=== Test 4: Function by value (lvalue) ===
+TrackedResource(2) constructed with value 20
+funcByValue called
+Copy constructions: 2
+Move constructions: 1
+
+=== Test 5: Function by value (rvalue) ===
+funcByValue called
+Copy constructions: 1
+TrackedResource(1) destructed
+
+=== Test 6: Function by reference ===
+funcByRef called
+All 4 ctors: 0
+
+=== Test 7: Function by rvalue reference ===
+funcByRvalueRef called
+Move constructions: 1
+
+=== Test 8: Return by value ===
+Copy constructions: 1
+TrackedResource(1) destructed
+  Note: RVO may eliminate the copy/move, compiler dependent
+
+=== Test 9: Assignment (lvalue) ===
+TrackedResource(3) copy assigned from 1
+Copy assignments: 1
+
+=== Test 10: Assignment (rvalue) ===
+TrackedResource(2) move assigned from -1
+
+=== Test 11: std::vector push_back (lvalue) ===
+Copy constructions: 1
+
+=== Test 12: std::vector push_back (rvalue) ===
+TrackedResource(1) move constructed from -1
+Move constructions: 1
+
+=== Test 13: std::vector push_back with std::move ===
+TrackedResource(1) move constructed from -1
+Move constructions: 1
+
+=== Test 14: Container resize ===
+TrackedResource(1) move constructed from -1
+TrackedResource(2) move constructed from -1
+TrackedResource(3) move constructed from -1
+Move constructions: 3
+
+=== Test 15: Multiple moves ===
+TrackedResource(1) move constructed from -1
+TrackedResource(1) move constructed from -1
+Move constructions: 2
+
+=== Test 16: Const object ===

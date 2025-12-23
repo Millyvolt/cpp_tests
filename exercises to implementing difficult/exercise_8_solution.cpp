@@ -191,12 +191,10 @@ int main() {
     std::cout << "\n=== Test 16: Const object ===" << std::endl;
     TrackedResource::resetCounters();
     const TrackedResource obj15(600);
-    TrackedResource obj16 = std::move(obj15);  // Falls back to copy because const
+    TrackedResource obj16 = std::move(obj15);
     TrackedResource::printCounters();
-    std::cout << "  Note: const objects cannot be moved, so copy constructor is used" << std::endl;
     
-    std::cout << "\n=== Final counters ===" << std::endl;
-    TrackedResource::printCounters();
+
     
     return 0;
 }
